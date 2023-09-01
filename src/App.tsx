@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Component from "./Components/Component";
 
 function App() {
   const [enteredText, setEnteredText] = useState("");
@@ -36,8 +36,7 @@ function App() {
           Submit
         </button>
       </form>
-
-      {submittedText && <p>You just typed {submittedText.toUpperCase()}</p>}
+      {submittedText ? <Component data={submittedText} /> : null}
     </div>
   );
 }
