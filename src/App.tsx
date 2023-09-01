@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
-import Component from "./Components/Component";
+import ComponentUpp from "./Components/ComponentUpp";
+import ComponentLow from "./Components/ComponentLow";
+import Dropbox from "./Components/Dropdown/Dropbox";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 
 function App() {
   const [enteredText, setEnteredText] = useState("");
@@ -36,7 +40,8 @@ function App() {
           Submit
         </button>
       </form>
-      {submittedText ? <Component data={submittedText} /> : null}
+      <Dropbox option={["UpperCase", "LowerCase", "Greetings"]}></Dropbox>
+      {submittedText ? <ComponentUpp data={submittedText} /> : null}
     </div>
   );
 }

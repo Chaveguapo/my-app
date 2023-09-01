@@ -1,4 +1,4 @@
-export default function Component(props: any) {
+export default function ComponentUpp(props: any) {
   return (
     <div>
       <h1>You sent: {props.data.toUpperCase()}</h1>
